@@ -73,11 +73,7 @@ pause.until(datetime(year, month, day_big_wait, hour_big_wait, minute_big_wait, 
 
 # Start web browser (getting the profile that has Aliexpress logged in)
 options = Options()
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--disable-blink-features=AutomationControlled')
-user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36'
-options.add_argument('user-agent={0}'.format(user_agent))
 options.add_argument("user-data-dir=D:\OneDrive - gib.tel.uva.es\Personal\Scripts Utiles\promo_clicker_bot/tmp")
 service = Service('chromedriver.exe', log_path=os.devnull)
 driver = webdriver.Chrome(options=options, service=service)
